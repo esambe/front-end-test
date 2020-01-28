@@ -15,45 +15,48 @@ import {
     DropdownItem,
     NavbarText
   } from 'reactstrap';
+import AppModal from '../components/AppModal';
 
-const NavMenu = () => {
+const NavMenu = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const [modal, setModal] = useState(false);
+
+
     const toggle = () => setIsOpen(!isOpen);
+    const triggerModal = () => setModal(!modal);
 
     return (
         <>
            <Navbar expand="md" id="app-bar" className="custom-nav">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                <Nav className="mr-auto" navbar>
-                    <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
-                    </NavItem>
-                    <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                    </NavItem>
+                <div className="container">
+                    <NavbarBrand href="/">BigCode</NavbarBrand>
+                    <NavbarToggler onClick={toggle} />
+                    <Collapse isOpen={isOpen} navbar>
+                    <Nav className="mr-auto" navbar></Nav>
+                    <Nav navbar>
+                    <NavLink href="/login">Login</NavLink>
+                    <NavLink href="/register">Register</NavLink>
                     <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                        Options
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                        <DropdownItem>
-                        Option 1
-                        </DropdownItem>
-                        <DropdownItem>
-                        Option 2
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                        Reset
-                        </DropdownItem>
-                    </DropdownMenu>
+                        <DropdownToggle nav caret>
+                            User
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            <DropdownItem>
+                                <NavLink href="/dashboard" className="text-dark">My Account</NavLink>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <NavLink href="/dashboard" className="text-dark">Edit Profile</NavLink>
+                            </DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem>
+                                <NavLink href="/login" className="text-danger">Logout</NavLink>
+                            </DropdownItem>
+                        </DropdownMenu>
                     </UncontrolledDropdown>
-                </Nav>
-                <NavbarText>Simple Text</NavbarText>
-                </Collapse>
+                    </Nav>
+                    </Collapse>
+                </div>
             </Navbar>
         </>
     );
