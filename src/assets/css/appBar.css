@@ -1,0 +1,9 @@
+nav#app-bar.custom-nav {
+    background-color: #242582;
+    border-bottom: transparent;
+    color: #fff
+}
+
+nav#app-bar.custom-nav .nav-link {
+    color: #fff;
+}

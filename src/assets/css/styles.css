@@ -1,0 +1,53 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.txt-center {
+    text-align: center
+}
+
+.txt-uppercase {
+    text-transform: uppercase
+}
+
+.txt-capitalize {
+    text-transform: capitalize
+}
+
+.txt-lg {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+.hero-section {
+    background-image: linear-gradient(to bottom, #242582, rgba(81, 45, 168, 0.5)), url('../images/hero.jpeg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-origin: padding-box;
+
+}
+.title-section {
+    width: 50%;
+}
+
+.underline {
+    display: block;
+    background-color: #000;
+    padding: 2px
+}
+
+/* COMPONENT */
