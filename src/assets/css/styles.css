@@ -29,6 +29,28 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.btn-app-primary.btn {
+    background-color: #242582;
+    color: #fff;
+    border: transparent;
+    font-family: 'Roboto', sans-serif
+}
+
+.btn-app-primary.btn:hover {
+    color: #fff;
+    background-color: #161863;
+}
+
+.txt-primary {
+    color: #242582;
+}
+
+.anchor:hover {
+    text-decoration: none;
+    color: #242582;
+    font-family: 'Roboto', sans-serif
+}
+
 .content {
     min-height: 100vh;
 }
@@ -50,4 +72,14 @@ body {
     padding: 2px
 }
 
+/* Login form */
+    .form-container {
+        margin: 10rem auto;
+    }
+/* End Loginform */
+
 /* COMPONENT */
+
+.loader-card {
+    margin-top: 20rem;
+}
